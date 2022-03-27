@@ -142,6 +142,15 @@ function App() {
             // style={{ color: `${textColor}` }}
           />
         </div>
+        <div style={{ margin: "15px 15px" }}>
+          <a
+            style={{ textDecoration: "none" }}
+            target="_blank"
+            href="https://github.com/Samyak2107/app-attic-task"
+          >
+            <Button>Github Source Code</Button>
+          </a>
+        </div>
       </AppProvider>
     </div>
   );
