@@ -148,7 +148,7 @@ function App() {
             target="_blank"
             href="https://github.com/Samyak2107/app-attic-task"
           >
-            <Button>Github Source Code</Button>
+            <Button primary>Github Source Code</Button>
           </a>
         </div>
       </AppProvider>
