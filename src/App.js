@@ -94,59 +94,6 @@ function App() {
     };
   }, [color]);
 
-  // useEffect(() => {
-  //   // const { hue, saturation, brightness, alpha } = color;
-  //   let c = (1 - Math.abs(2 * brightness - 1)) * saturation,
-  //     x = c * (1 - Math.abs(((hue / 60) % 2) - 1)),
-  //     m = brightness - c / 2,
-  //     r = 0,
-  //     g = 0,
-  //     b = 0;
-  //   if (0 <= hue && hue < 60) {
-  //     r = c;
-  //     g = x;
-  //     b = 0;
-  //   } else if (60 <= hue && hue < 120) {
-  //     r = x;
-  //     g = c;
-  //     b = 0;
-  //   } else if (120 <= hue && hue < 180) {
-  //     r = 0;
-  //     g = c;
-  //     b = x;
-  //   } else if (180 <= hue && hue < 240) {
-  //     r = 0;
-  //     g = x;
-  //     b = c;
-  //   } else if (240 <= hue && hue < 300) {
-  //     r = x;
-  //     g = 0;
-  //     b = c;
-  //   } else if (300 <= hue && hue < 360) {
-  //     r = c;
-  //     g = 0;
-  //     b = x;
-  //   }
-  //   r = Math.round((r + m) * 255);
-  //   g = Math.round((g + m) * 255);
-  //   b = Math.round((b + m) * 255);
-  //   // await setTextColor(`rgba(${r},${g},${b},${alpha})`);
-  //   setTextColor(`rgba(${r},${g},${b},${alpha})`);
-  //   console.log(`rgb(${r},${g},${b},${alpha})`);
-  //   console.log(
-  //     `hsla(${color.hue}, ${color.saturation * 100}%, ${
-  //       color.brightness * 100
-  //     }%, ${color.alpha})`
-  //   );
-  // }, [hue, saturation, brightness, alpha]);
-
-  // useEffect(() => {
-  //   setTextColor(
-  //     `hsla(${color.hue}, ${color.saturation * 100}%, ${
-  //       color.brightness * 100
-  //     }%, ${color.alpha})`
-  //   );
-  // }, [color]);
   const canvas = useRef(null);
   const [text, setText] = useState("your quote");
 
@@ -180,6 +127,7 @@ function App() {
               name="text"
               value={text}
               onChange={handleChange}
+              maxLength={100}
             />
           </div>
           <div style={{ margin: "15px 15px" }}>
